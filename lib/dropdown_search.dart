@@ -482,6 +482,8 @@ class DropdownSearchState<T> extends State<DropdownSearch<T>> {
       mainAxisSize: MainAxisSize.min,
       mainAxisAlignment: MainAxisAlignment.end,
       children: <Widget>[
+        if (widget.dropdownDecoratorProps.dropdownSearchDecoration?.suffixIcon != null)
+          widget.dropdownDecoratorProps.dropdownSearchDecoration!.suffixIcon!,
         if (widget.clearButtonProps.isVisible && getSelectedItems.isNotEmpty)
           IconButton(
             style: widget.clearButtonProps.style,
